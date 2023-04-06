@@ -14,7 +14,7 @@ public class ExampleStack {
         System.out.println(st.pop());
         st.push("!");
 
-        int count = st.search("Aku");
+        int count = st.search("aku");
         while (count != -1 && count >1) {
             st.pop();
             count--;
@@ -24,3 +24,4 @@ public class ExampleStack {
 
     }
 }
+
