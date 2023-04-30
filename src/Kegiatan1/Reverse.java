@@ -1,4 +1,4 @@
-package Trial;
+package Kegiatan1;
 
 import java.util.Scanner;
 
@@ -29,7 +29,7 @@ class Stack {
 public class Reverse {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan sebuah string: ");
+        System.out.print("Masukkan String: ");
         String input = sc.nextLine();
 
         int length = input.length();
