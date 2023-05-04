@@ -1,7 +1,7 @@
-package trial2;
+package nyobak;
 
 import java.util.Scanner;
-//referensi
+
 class Node {
     String data;
     Node next;
@@ -63,34 +63,33 @@ class Queue {
     }
 }
 
-public class Main {
+public class mixue {
     public static void main(String[] args) {
-        Queue hotelQueue = new Queue();
+        Queue mixueQueue = new Queue();
         Scanner input = new Scanner(System.in);
         int choice;
         String customerName;
 
         do {
-            System.out.println("===== ANTRIAN HOTEL =====");
-            System.out.println("1. Tambah pelanggan");
+            System.out.println("===== ORDERAN MIXUE =====");
+            System.out.println("1. Tambah nomor antrian");
             System.out.println("2. Hapus pelanggan antrian pertama");
             System.out.println("3. Lihat pelanggan pertama");
             System.out.println("4. Cek apakah antrian kosong");
             System.out.println("5. Lihat jumlah pelanggan dalam antrian");
-            System.out.println("0. Keluar");
             System.out.print("Pilihan: ");
             choice = input.nextInt();
 
             switch (choice) {
                 case 1:
                     input.nextLine(); // clear buffer
-                    System.out.print("Masukkan nama pelanggan: ");
+                    System.out.print("Masukkan nomor antrian: ");
                     customerName = input.nextLine();
-                    hotelQueue.enqueue(customerName);
+                    mixueQueue.enqueue(customerName);
                     System.out.println("Pelanggan " + customerName + " berhasil ditambahkan ke dalam antrian.");
                     break;
                 case 2:
-                    customerName = hotelQueue.dequeue();
+                    customerName = mixueQueue.dequeue();
                     if (customerName == null) {
                         System.out.println("Antrian kosong.");
                     } else {
@@ -98,25 +97,22 @@ public class Main {
                     }
                     break;
                 case 3:
-                    customerName = hotelQueue.peek();
+                    customerName = mixueQueue.peek();
                     if (customerName == null) {
                         System.out.println("Antrian kosong.");
                     } else {
-                        System.out.println("Pelanggan pertama di antrian: " + customerName);
+                        System.out.println("Pelanggan pertama di nomor: " + customerName);
                     }
                     break;
                 case 4:
-                    if (hotelQueue.isEmpty()) {
+                    if (mixueQueue.isEmpty()) {
                         System.out.println("Antrian kosong.");
                     } else {
                         System.out.println("Antrian tidak kosong.");
                     }
                     break;
                 case 5:
-                    System.out.println("Jumlah pelanggan dalam antrian: " + hotelQueue.size());
-                    break;
-                case 0:
-                    System.out.println("Terima kasih telah menggunakan program ini.");
+                    System.out.println("Jumlah pelanggan dalam antrian: " + mixueQueue.size());
                     break;
                 default:
                     System.out.println("Pilihan tidak valid.");
