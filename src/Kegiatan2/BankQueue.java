@@ -23,13 +23,6 @@ class Queue {
         this.size=0;
     }
 
-    /**
-     * method enqueue digunakan untuk menambahkan data pada rear
-     * @param data
-     * @if kosong maka add data
-     * @else rear diperbarui jadi node baru
-     *
-     */
     public void enqueue(int data) {
         Node newNode = new Node(data);
 
@@ -43,10 +36,7 @@ class Queue {
         size++;
     }
 
-    /**
-     * method dequeue untuk menghapus item pada head
-     * @return
-     */
+
     public int dequeue() {
         if (isEmpty()) {
             System.out.println("Antrian kosong");
@@ -64,10 +54,7 @@ class Queue {
         return data;
     }
 
-    /**
-     * menampilkan antrian paling atas dari data yang diinput
-     * @return
-     */
+
     public int peek() {
         if (isEmpty()) {
             return -1;
